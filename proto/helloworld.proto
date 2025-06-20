@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option go_package = "example.com/rpcdemo/helloworld"; // 替换为你项目的实际模块路径
+
+package helloworld;
+
+service Greeter {
+  rpc SayHello (HelloRequest) returns (HelloReply);
+}
+
+message HelloRequest {
+  string name = 1;
+}
+
+message HelloReply {
+  string message = 1;
+}
